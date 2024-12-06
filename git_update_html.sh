@@ -17,7 +17,7 @@ log "Successfully changed directory to /c/path_programs."
 source "go_to_today_is.sh" || { log "ERROR: Failed to source go_to_today_is.sh."; exit 1; }
 log "Successfully sourced go_to_today_is.sh."
 
-TODAY=$(date +"%A, %B %d, %Y")
+TODAY=$(date +"%Y-%m-%d %H:%M:%S.%3N")
 log "Fetched today's date: $TODAY."
 
 echo "$TODAY" > index.html || { log "ERROR: Failed to write today's date to index.html."; exit 1; }
