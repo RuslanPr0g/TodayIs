@@ -23,6 +23,9 @@ log "Fetched today's date: $TODAY."
 echo "$TODAY" > index.html || { log "ERROR: Failed to write today's date to index.html."; exit 1; }
 log "Successfully wrote today's date to index.html."
 
+log "Waiting for 20 seconds before proceeding with git add."
+sleep 20
+
 git add . || { log "ERROR: Failed to add files to Git."; exit 1; }
 log "Successfully staged changes for Git commit."
 
