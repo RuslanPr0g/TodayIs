@@ -28,7 +28,7 @@ git clean -f
 
 git pull --rebase origin master || { log "ERROR: Git pull failed."; exit 1; }
 
-echo "$TODAY" > index.html || { log "ERROR: Failed to write today's date to index.html."; exit 1; }
+echo "$TODAY" > index_windows.html || { log "ERROR: Failed to write today's date to index.html."; exit 1; }
 log "Successfully wrote today's date to index.html."
 
 log "Waiting for 20 seconds before proceeding with git add."
