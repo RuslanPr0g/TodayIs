@@ -21,6 +21,8 @@ log "Successfully changed directory to $TARGET_DIR."
 TODAY=$(date +"%Y-%m-%d %H:%M:%S.%3N")
 log "Fetched today's date: $TODAY."
 
+git rebase --abort
+
 git restore .
 
 git clean -f

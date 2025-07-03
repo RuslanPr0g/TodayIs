@@ -20,6 +20,8 @@ log "Successfully sourced go_to_today_is.sh."
 TODAY=$(date +"%Y-%m-%d %H:%M:%S.%3N")
 log "Fetched today's date: $TODAY."
 
+git rebase --abort
+
 git restore .
 
 git clean -f
