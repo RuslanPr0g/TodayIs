@@ -29,6 +29,8 @@ sleep 20
 
 git pull origin master
 
+git pull
+
 git add . || { log "ERROR: Failed to add files to Git."; exit 1; }
 log "Successfully staged changes for Git commit."
 
